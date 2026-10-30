@@ -1,0 +1,776 @@
+/*CONFIGURACIÓN GENERAL*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    background: #1691f1;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*BARRA DE NAVEGACIÓN*/
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Azul oscuro */
+    background: #073b5c;
+
+    border-bottom: 3px solid #129a0c;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    position: relative;
+    font-size: 17px;
+    color: white;
+    min-width: 160px;
+}
+
+.logo strong {
+    margin-left: 4px;
+    color: white;
+}
+
+.logo small {
+    display: block;
+    font-size: 8px;
+    color: #d9edf7;
+    margin-left: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #129a0c;
+}
+
+
+/*BOTONES*/
+
+.btn-jugar,
+.btn-principal {
+    background: #0976ed;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-jugar:hover,
+.btn-principal:hover {
+    background: #129a0c;
+    transform: translateY(-2px);
+}
+
+
+/*SECCIÓN PRINCIPAL - HERO*/
+
+.hero {
+    min-height: 520px;
+    padding: 70px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    /* Fondo azul */
+    background: #1691f1;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.etiqueta {
+    color: white;
+    background: #0a6a10;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.hero h1 {
+    font-size: 43px;
+    line-height: 1.1;
+    margin: 18px 0;
+    color: white;
+}
+
+.hero p {
+    max-width: 550px;
+    color: white;
+    font-size: 15px;
+}
+
+.botones {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.seguro {
+    font-size: 11px;
+    color: white;
+}
+
+
+/*IMAGEN DEL JUEGO*/
+
+.hero-imagen {
+    width: 45%;
+}
+
+.juego-preview {
+    width: 100%;
+    height: 300px;
+    border-radius: 18px;
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 4px solid #129a0c;
+}
+
+.juego-preview img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+}
+
+
+/*SECCIONES GENERALES*/
+
+.seccion {
+    padding: 75px 5%;
+    text-align: center;
+    background: white;
+}
+
+.gris {
+    background: #f7f9fc;
+}
+
+.subtitulo {
+    color: #0976ed;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.seccion h2 {
+    font-size: 34px;
+    color: #073b5c;
+    margin-top: 5px;
+}
+
+.seccion h3 {
+    font-size: 23px;
+    color: #0a6a10;
+    margin-bottom: 25px;
+}
+
+.descripcion {
+    max-width: 850px;
+    margin: 15px auto 35px;
+    color: #555;
+    font-size: 14px;
+}
+
+
+/*TARJETAS*/
+
+.tarjetas {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+
+    border: 2px solid #dceefa;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    border-color: #1691f1;
+}
+
+.icono {
+    width: 35px;
+    height: 35px;
+
+    background: #e8f4ff;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    color: #0976ed;
+}
+
+.tarjeta h4 {
+    color: #073b5c;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    color: #666;
+    font-size: 12px;
+}
+
+
+/*PALABRAS*/
+
+.palabras {
+    max-width: 1150px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+.palabra {
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.palabra.destacada {
+    border: 2px solid #129a0c;
+}
+
+.imagen-palabra {
+    height: 130px;
+    border-radius: 8px;
+
+    background: #e8f4ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.tipo {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 9px;
+    display: inline-block;
+}
+
+.aguda {
+    background: #dceeff;
+    color: #0976ed;
+}
+
+.grave {
+    background: #e4f6e2;
+    color: #0a6a10;
+}
+
+.palabra small {
+    float: right;
+    color: #999;
+    font-size: 9px;
+}
+
+.palabra h4 {
+    clear: both;
+    font-size: 25px;
+    color: #073b5c;
+    margin: 10px 0;
+}
+
+.palabra p {
+    font-size: 11px;
+    color: #666;
+}
+
+
+/*GAMIFICACIÓN Y MECÁNICAS*/
+
+#mecanicas {
+    text-align: left;
+    background: #f7f9fc;
+}
+
+#mecanicas h2 {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mecanicas > p {
+    max-width: 1100px;
+    margin: 10px auto 30px;
+    color: #666;
+    font-size: 13px;
+}
+
+.mecanicas {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.mecanica {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.mecanica > span {
+    min-width: 25px;
+    height: 25px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #129a0c;
+    color: white;
+
+    font-size: 12px;
+}
+
+.mecanica strong {
+    color: #073b5c;
+    font-size: 13px;
+}
+
+.mecanica p {
+    color: #666;
+    font-size: 11px;
+}
+
+
+/*BENEFICIOS*/
+
+.beneficios {
+    padding: 90px 20px;
+    text-align: center;
+    background: white;
+}
+
+.beneficios h2 {
+    color: #073b5c;
+    font-size: 35px;
+}
+
+.beneficios p {
+    color: #666;
+    margin: 10px 0 25px;
+}
+
+
+/*ZONA "COMENZAR LA AVENTURA"*/
+
+.zona-juego {
+    max-width: 850px;
+    margin: 70px auto 0;
+    padding: 40px 20px;
+
+    border-top: 3px solid #1691f1;
+
+    text-align: center;
+}
+
+.zona-juego h3 {
+    color: #073b5c;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.zona-juego p {
+    color: #666;
+    margin: 0 0 10px;
+    font-size: 14px;
+}
+
+.zona-juego .btn-principal {
+    margin-top: 30px;
+}
+
+
+/* ESTILOS PARA PDF*/
+
+.pdf-page {
+    padding: 32px 0 48px;
+    min-height: 65vh;
+    background: #f7f9fc;
+}
+
+.pdf-heading {
+    text-align: center;
+    margin: 0 auto 24px;
+    padding: 0 16px;
+}
+
+.pdf-heading h2 {
+    margin-bottom: 10px;
+    color: #073b5c;
+}
+
+.pdf-heading p {
+    max-width: 720px;
+    margin: 0 auto 20px;
+    color: #555;
+}
+
+.pdf-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 18px 0 24px;
+}
+
+.pdf-actions .btn {
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+}
+
+.pdf-viewer {
+    width: min(1100px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.pdf-viewer iframe {
+    display: block;
+    width: 100%;
+    height: min(78vh, 900px);
+    min-height: 520px;
+
+    border: 3px solid #0976ed;
+    border-radius: 8px;
+
+    background: white;
+}
+
+.pdf-fallback {
+    text-align: center;
+    margin: 14px auto 0;
+    padding: 0 16px;
+}
+
+
+/* =========================================================
+   BOTONES GENERALES
+========================================================= */
+
+.pdf-actions,
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.btn,
+.boton {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background: #0976ed;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    border: none;
+}
+
+.btn:hover,
+.boton:hover {
+    background: #0a6a10;
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    background: #129a0c;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0a6a10;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+========================================================= */
+
+footer {
+    background: #073b5c;
+
+    color: white;
+
+    padding: 50px 5%;
+
+    text-align: center;
+
+    border-top: 4px solid #129a0c;
+}
+
+footer h3 {
+    font-size: 22px;
+    color: white;
+}
+
+footer p {
+    margin-top: 8px;
+    color: #d9edf7;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   MANUAL
+========================================================= */
+
+.manual-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(7, 59, 92, 0.65),
+            rgba(22, 145, 241, 0.65)
+        ),
+        url("Recursos/Multimedia.jpg") center/cover no-repeat;
+}
+
+.manual-content h1,
+.manual-content h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.boton-volver {
+    background: #073b5c;
+    color: white;
+}
+
+.boton-volver:hover {
+    background: #0a6a10;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .manual-content {
+        padding: 25px;
+    }
+
+    .manual-content h1,
+    .manual-content h2 {
+        font-size: 32px;
+    }
+
+    .botones {
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 12px 4%;
+    }
+
+    nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .hero-text,
+    .hero-imagen {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .palabras {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .pdf-page {
+        padding-top: 24px;
+    }
+
+    .pdf-viewer iframe {
+        min-height: 420px;
+        height: 65vh;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .manual-page {
+        padding: 20px;
+    }
+
+    .manual-content h1,
+    .manual-content h2 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .botones {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .boton {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .seccion,
+    .beneficios {
+        padding: 40px 5%;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .seccion h2,
+    .beneficios h2 {
+        font-size: 24px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .tarjetas,
+    .palabras {
+        grid-template-columns: 1fr;
+    }
+
+    .juego-preview {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .juego-preview img {
+        object-fit: contain;
+    }
+
+    .botones {
+        flex-wrap: wrap;
+    }
+
+    .btn-jugar,
+    .btn-principal {
+        max-width: 100%;
+    }
+}
